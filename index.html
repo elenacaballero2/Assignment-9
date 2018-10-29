@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Halloween!</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+</head>
+<body>
+
+<h1>Happy Halloween!</h1>
+<h2> Click on any Key for an array of colors!</h2>
+
+<div>
+<img src="images/pumpkins.jpg" alt="pumpkins" style="width:25%">
+
+<img src="images/witch.png" alt="witch" style="width:25%">
+
+<img src="images/evil.png" alt="bat" style="width: 25%">
+
+</div>
+
+
+
+	<script type="text/javascript">
+
+			var color=0;
+			var alpha=0.0; 
+			var h1=0;
+
+			document.addEventListener("keypress", function(event){
+				console.log(event);
+
+				var key=event.key;
+
+				
+				if(key=='r'){
+					color=0;
+
+				}else if (key=='o') {
+					color=90;
+				}else if (key=='y'){
+					color=80;
+				}else if(key=='g'){
+					color=70;
+				}
+				
+				
+				
+				var divs= document.getElementsByTagName("div");
+				
+				for(var i=0; i<divs.length;i++){
+					divs[i].style.background='hsl('+color+',100%,50%)';
+					color+=9;
+
+				}
+
+				
+			});
+			</script>
+
+
+
+</body>
+</html>
